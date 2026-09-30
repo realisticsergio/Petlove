@@ -1,0 +1,91 @@
+.field {
+  position: relative;
+}
+
+.control {
+  position: relative;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-round);
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.control:hover,
+.control:focus-within {
+  border-color: var(--color-primary);
+}
+
+.control:focus-within {
+  box-shadow: 0 0 0 3px rgba(246, 184, 61, 0.15);
+}
+
+.control.error {
+  border-color: var(--color-error);
+}
+
+.control.valid {
+  border-color: var(--color-success);
+}
+
+.input {
+  width: 100%;
+  height: 42px;
+  padding: 12px 14px;
+  border: 0;
+  outline: 0;
+  border-radius: inherit;
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 1.29;
+}
+
+.input::placeholder {
+  color: var(--color-text);
+  opacity: 1;
+}
+
+.input[type='password'],
+.input[type='text'] {
+  padding-right: 48px;
+}
+
+.passwordButton {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  display: flex;
+  width: 22px;
+  height: 22px;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  transform: translateY(-50%);
+  transition: color var(--transition);
+}
+
+.passwordButton:hover,
+.passwordButton:focus-visible {
+  color: var(--color-primary);
+}
+
+.message {
+  margin-top: 4px;
+  padding-left: 14px;
+  color: var(--color-error);
+  font-size: 12px;
+  line-height: 1.17;
+}
+
+@media screen and (min-width: 768px) {
+  .input {
+    height: 52px;
+    padding: 16px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .passwordButton {
+    right: 16px;
+  }
+}

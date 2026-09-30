@@ -1,0 +1,28 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.empty {
+  display: flex;
+  min-height: 110px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px dashed var(--color-border);
+  border-radius: 20px;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .list {
+    gap: 16px;
+  }
+
+  .empty {
+    min-height: 130px;
+    font-size: 16px;
+  }
+}

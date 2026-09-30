@@ -1,0 +1,110 @@
+.card {
+  display: grid;
+  grid-template-columns: 74px minmax(0, 1fr);
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+}
+
+.image {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--color-primary-light);
+}
+
+.content {
+  min-width: 0;
+}
+
+.heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.title {
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.29;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.removeButton {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  transition:
+    color var(--transition),
+    background-color var(--transition),
+    opacity var(--transition);
+}
+
+.removeButton:hover:not(:disabled),
+.removeButton:focus-visible:not(:disabled) {
+  color: var(--color-surface);
+  background-color: var(--color-primary);
+}
+
+.removeButton:disabled {
+  opacity: 0.5;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 12px;
+  margin: 10px 0 0;
+}
+
+.detail {
+  min-width: 0;
+}
+
+.detail dt {
+  color: var(--color-text-secondary);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.detail dd {
+  margin: 2px 0 0;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 1.17;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .image {
+    width: 90px;
+    height: 90px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .details {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

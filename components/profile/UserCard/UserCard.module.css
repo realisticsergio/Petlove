@@ -1,0 +1,56 @@
+.card {
+  position: relative;
+  padding: 70px 20px 40px;
+  border-radius: var(--radius-large);
+  background-color: var(--color-surface);
+}
+
+.label {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  padding: 10px 16px;
+  border-radius: var(--radius-round);
+  color: var(--color-surface);
+  background-color: var(--color-primary);
+  font-weight: 700;
+}
+
+.editButton {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+}
+
+.title {
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 1.33;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    padding: 90px 40px 60px;
+  }
+
+  .label {
+    top: 24px;
+    left: 40px;
+  }
+
+  .editButton {
+    top: 24px;
+    right: 40px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .card {
+    min-height: 620px;
+    padding-inline: 32px;
+  }
+}

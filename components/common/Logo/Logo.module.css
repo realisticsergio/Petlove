@@ -1,0 +1,45 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.6px;
+  transition: opacity var(--transition);
+}
+
+.logo:hover,
+.logo:focus-visible {
+  opacity: 0.75;
+}
+
+.dark {
+  color: var(--color-text);
+}
+
+.light {
+  color: var(--color-surface);
+}
+
+.heart {
+  margin-inline: 1px;
+  color: var(--color-primary);
+  font-size: 17px;
+  line-height: 1;
+}
+
+.light .heart {
+  color: var(--color-surface);
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    font-size: 28px;
+    letter-spacing: -1.12px;
+  }
+
+  .heart {
+    font-size: 23px;
+  }
+}

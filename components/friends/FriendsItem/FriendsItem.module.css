@@ -1,0 +1,131 @@
+.card {
+  position: relative;
+  min-height: 184px;
+  padding: 40px 20px;
+  border-radius: var(--radius-medium);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.schedule {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 8px;
+  border-radius: var(--radius-small);
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  font-size: 12px;
+  line-height: 1.33;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
+}
+
+.logoLink {
+  display: block;
+  border-radius: 50%;
+  transition: transform var(--transition);
+}
+
+.logoLink:hover,
+.logoLink:focus-visible {
+  transform: scale(1.05);
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.info {
+  min-width: 0;
+}
+
+.title {
+  margin-bottom: 14px;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.contacts {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 8px;
+  font-style: normal;
+}
+
+.row {
+  display: flex;
+  min-width: 0;
+  gap: 3px;
+  font-size: 12px;
+  line-height: 1.17;
+}
+
+.label {
+  flex-shrink: 0;
+  color: var(--color-text-secondary);
+}
+
+.link,
+.value {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--color-text);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.link {
+  transition: color var(--transition);
+}
+
+.link:hover,
+.link:focus-visible {
+  color: var(--color-primary);
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    min-height: 196px;
+    padding: 40px 20px;
+  }
+
+  .schedule {
+    top: 16px;
+    right: 16px;
+  }
+
+  .content {
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .logo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .title {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .row {
+    font-size: 14px;
+    line-height: 1.29;
+  }
+}

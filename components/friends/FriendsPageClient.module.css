@@ -1,0 +1,28 @@
+.main {
+  padding-block: 26px 80px;
+}
+
+.results {
+  min-height: 300px;
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    padding-block: 48px 80px;
+  }
+
+  .results {
+    margin-top: 44px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .main {
+    padding-block: 64px 80px;
+  }
+
+  .results {
+    margin-top: 60px;
+  }
+}

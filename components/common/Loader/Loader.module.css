@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  min-height: 160px;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullScreen {
+  position: fixed;
+  z-index: 200;
+  inset: 0;
+  min-height: 100vh;
+  background-color: rgba(249, 249, 249, 0.85);
+  backdrop-filter: blur(3px);
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid var(--color-primary-light);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 800ms linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation-duration: 1600ms;
+  }
+}

@@ -1,0 +1,88 @@
+.wrapper {
+  padding: 40px 28px;
+  text-align: center;
+}
+
+.icon {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+}
+
+.title {
+  color: var(--color-primary);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.text {
+  max-width: 300px;
+  margin: 20px auto 0;
+  line-height: 1.43;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.login,
+.register {
+  display: flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-round);
+  font-weight: 700;
+  text-transform: uppercase;
+  transition:
+    color var(--transition),
+    background-color var(--transition);
+}
+
+.login {
+  color: var(--color-surface);
+  background-color: var(--color-primary);
+}
+
+.login:hover,
+.login:focus-visible {
+  background-color: var(--color-primary-hover);
+}
+
+.register {
+  background-color: var(--color-primary-light);
+}
+
+.register:hover,
+.register:focus-visible {
+  color: var(--color-surface);
+  background-color: var(--color-primary);
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    padding: 60px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .login,
+  .register {
+    min-height: 48px;
+  }
+}

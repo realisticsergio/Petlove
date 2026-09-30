@@ -1,0 +1,94 @@
+.authNav {
+  display: none;
+  align-items: center;
+  gap: 8px;
+}
+
+.link {
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: var(--radius-round);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.29;
+  letter-spacing: -0.42px;
+  text-transform: uppercase;
+  transition:
+    color var(--transition),
+    background-color var(--transition),
+    border-color var(--transition);
+}
+
+.login {
+  min-width: 119px;
+  padding-inline: 35px;
+}
+
+.register {
+  min-width: 149px;
+  padding-inline: 20px;
+}
+
+.dark .login {
+  color: var(--color-surface);
+  background-color: var(--color-primary);
+}
+
+.dark .login:hover,
+.dark .login:focus-visible,
+.dark .login.active {
+  background-color: var(--color-primary-hover);
+}
+
+.dark .register {
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+}
+
+.dark .register:hover,
+.dark .register:focus-visible,
+.dark .register.active {
+  border-color: var(--color-primary);
+}
+
+.light .login {
+  color: var(--color-surface);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.light .login:hover,
+.light .login:focus-visible,
+.light .login.active {
+  border-color: var(--color-surface);
+}
+
+.light .register {
+  color: var(--color-primary);
+  background-color: var(--color-surface);
+}
+
+.light .register:hover,
+.light .register:focus-visible,
+.light .register.active {
+  color: var(--color-primary-hover);
+  background-color: var(--color-primary-light);
+}
+
+.mobile {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.mobile .link {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .authNav:not(.mobile) {
+    display: flex;
+  }
+}

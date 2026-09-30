@@ -1,0 +1,77 @@
+.wrapper {
+  padding: 40px 28px;
+  text-align: center;
+}
+
+.image {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  font-size: 44px;
+  line-height: 1;
+}
+
+.question {
+  margin-bottom: 28px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.button {
+  min-height: 42px;
+  border-radius: var(--radius-round);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.29;
+  transition:
+    color var(--transition),
+    background-color var(--transition),
+    opacity var(--transition);
+}
+
+.button:disabled {
+  opacity: 0.6;
+}
+
+.confirm {
+  color: var(--color-surface);
+  background-color: var(--color-primary);
+}
+
+.confirm:hover:not(:disabled),
+.confirm:focus-visible:not(:disabled) {
+  background-color: var(--color-primary-hover);
+}
+
+.cancel {
+  color: var(--color-text);
+  background-color: rgba(38, 38, 38, 0.05);
+}
+
+.cancel:hover:not(:disabled),
+.cancel:focus-visible:not(:disabled) {
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    padding: 80px;
+  }
+
+  .question {
+    margin-bottom: 28px;
+  }
+}
